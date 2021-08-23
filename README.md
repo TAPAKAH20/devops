@@ -35,13 +35,13 @@ docker run r0ach20/devops -p 5000:5000
 ## Version History
 
 * 0.13
-    * Practices update
+  * Practices update
 * 0.12
-    * Docker, REAMDE update
+  * Docker, REAMDE update
 * 0.11
-    * Markdown files added
+  * Markdown files added
 * 0.10
-    * Initial Release
+  * Initial Release
 
 ## Acknowledgments
 
