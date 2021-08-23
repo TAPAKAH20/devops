@@ -8,21 +8,10 @@ Simple app displaying current time in MSK.
 
 ## Getting Started
 
-### Built with
-
-* Flask 1.1.4+
-* Python 3.6.9+
-
-#### Linters
-
-* [Pylint](https://www.pylint.org/)
-* [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli)
-* [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint)
-
 ### Installing
 
 Clone the repository
-`git clone https://github.com/TAPAKAH20/devops_pjct.git`
+`git clone https://github.com/TAPAKAH20/devops.git`
 
 Install flask
 `pip3 install flask`
@@ -32,7 +21,7 @@ Install flask
 Python version
 
 ``` Bash
-cd devops_pjct/python_app
+cd devops/python_app
 flask run
 ```
 
@@ -45,6 +34,8 @@ docker run r0ach20/devops -p 5000:5000
 
 ## Version History
 
+* 0.13
+    * Practices update
 * 0.12
     * Docker, REAMDE update
 * 0.11

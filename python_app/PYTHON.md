@@ -27,3 +27,9 @@ and nothing from flask specific ones.
 2. Using app factories and `current_app` function
 3. Extracting configuration into separate .yaml files
 4. Use `celery` for task queue
+
+### Linters used
+
+* [Pylint](https://www.pylint.org/) for python
+* [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) for markdown
+* [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint) for Dockerfile
