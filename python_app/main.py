@@ -26,4 +26,4 @@ def health_check():
     """
         Stub for future healthcheck function
     """
-    return "<p>Healthy</p>"
+    return ''

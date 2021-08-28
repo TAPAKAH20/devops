@@ -13,27 +13,49 @@ Simple app displaying current time in MSK.
 Clone the repository
 `git clone https://github.com/TAPAKAH20/devops.git`
 
-Install flask
-`pip3 install flask`
 
-### Executing program
+#### Python
 
-Python version
-
-``` Bash
+Install requirements
+```Bash
 cd devops/python_app
-flask run
+pip3 install -r requirements.txt
 ```
 
-Docker container
+#### Docker
 
 ``` Bash
 docker pull r0ach20/devops
+```
+
+### Unit Tests
+
+Testing is performed via standart python test framework `unittest`
+
+```Bash
+python3 python_app/tests.py
+```
+
+### Executing program
+
+#### Python version
+
+``` Bash
+cd devops/python_app
+export FLASK_APP=main
+flask run
+```
+
+#### Docker container
+
+``` Bash
 docker run r0ach20/devops -p 5000:5000
 ```
 
 ## Version History
 
+* 0.14
+  * Unit tests
 * 0.13
   * Practices update
 * 0.12
