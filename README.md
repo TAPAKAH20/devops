@@ -1,5 +1,7 @@
 # DevOps course project
 
+![Lint, test and push](https://github.com/TAPAKAH20/devops/actions/workflows/main.yml/badge.svg)
+
 Project to be used during the course.
 
 ## Description
