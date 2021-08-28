@@ -1,6 +1,5 @@
 # PYHTON.md
 
-
 Flask is easy to start and relatively lightweight framework, and i had a
 minor amount of expierence with it.
 
@@ -27,13 +26,14 @@ For unit testing `unittest` is used.
 4. Use `celery` for task queue
 
 ## Unit testing best practices
+
 1. Tests should be fast
 2. Tests should be simple
-4. Tests should be readable
-5. Tests should be deterministic
-6. Unit tests could be run in isolation
-7. The test should be able to automatically detect if it passed
-8. Use long and descriptive names for testing functions.
+3. Tests should be readable
+4. Tests should be deterministic
+5. Unit tests could be run in isolation
+6. The test should be able to automatically detect if it passed
+7. Use long and descriptive names for testing functions.
 
 ### Linters used
 

@@ -13,10 +13,10 @@ Simple app displaying current time in MSK.
 Clone the repository
 `git clone https://github.com/TAPAKAH20/devops.git`
 
-
 #### Python
 
 Install requirements
+
 ```Bash
 cd devops/python_app
 pip3 install -r requirements.txt
