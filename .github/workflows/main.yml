@@ -77,7 +77,7 @@ jobs:
           context: ./python_app/
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/devops:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
