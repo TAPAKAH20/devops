@@ -77,6 +77,8 @@ jobs:
           context: ./python_app/
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
