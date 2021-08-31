@@ -1,4 +1,9 @@
-terraform.tfstate.d/
-.terraform.lock.hcl
-virtualbox.box
-.terraform/
+virtualbox/terraform.tfstate.d/
+virtualbox/.terraform.lock.hcl
+virtualbox/virtualbox.box
+virtualbox/.terraform/
+
+aws/terraform.tfstate.d/
+aws/.terraform.lock.hcl
+aws/aws.box
+aws/.terraform/
