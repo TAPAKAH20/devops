@@ -7,3 +7,5 @@ aws/terraform.tfstate.d/
 aws/.terraform.lock.hcl
 aws/aws.box
 aws/.terraform/
+
+.terraform
