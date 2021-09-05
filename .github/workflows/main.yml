@@ -34,7 +34,6 @@ jobs:
       
   run_unit_tests:
     runs-on: ubuntu-latest
-    needs: run_linters
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
