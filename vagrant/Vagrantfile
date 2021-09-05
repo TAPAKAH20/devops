@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   end
   
   config.vm.provision :ansible do |ansible|
-    ansible.playbook = "../ansible/install_docker.yml"
+    ansible.playbook = "../ansible/python_app.yml"
     ansible.groups = {
       "docker_group" => ["host1"]
     }

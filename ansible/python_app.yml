@@ -1,0 +1,23 @@
+---
+- include: install_docker.yml
+
+- name: Copy and run docker compose
+  hosts: docker_group
+  become: yes
+  tasks:
+    - name: Create directory in /opt
+      file:
+        path: /opt/python_app
+        state: directory
+
+    - name: Copy docker-compose.yml
+      copy:
+        src: ../python_app/docker-compose.yml
+        dest: /opt/python_app
+
+    - name: Run docker-compose
+      docker_compose: # ansible failing to find python package docker
+        project_src: /opt/python_app
+        files:
+            - docker-compose.yml
+        state: present

@@ -24,7 +24,7 @@ docker_apt_ignore_key_error: true
 docker_apt_gpg_key: "{{ docker_repo_url }}/{{ ansible_distribution | lower }}/gpg"
 
 # A list of users who will be added to the docker group.
-docker_users: []
+docker_users: ["vagrant"]
 
 # Docker daemon options as a dict
 docker_daemon_options: {}
