@@ -28,3 +28,6 @@ docker_users: ["vagrant"]
 
 # Docker daemon options as a dict
 docker_daemon_options: {}
+
+# Install docker and docker compese python packages
+docker_python_install: true
