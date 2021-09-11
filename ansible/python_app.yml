@@ -16,7 +16,7 @@
         dest: /opt/python_app
 
     - name: Run docker-compose
-      community.docker.docker_compose: 
+      docker_compose: 
         project_src: /opt/python_app
         files:
             - docker-compose.yml
