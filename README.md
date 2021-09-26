@@ -10,6 +10,11 @@ Simple app displaying current time in MSK.
 
 ## Getting Started
 
+### Endpoints
+
+`localhost:5000/` main page with time
+`localhost:5000/visitors` list of the times at which page was visited
+
 ### Installing
 
 Clone the repository
