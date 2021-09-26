@@ -3,3 +3,5 @@ services:
         image: "r0ach20/devops"
         ports: 
             - 5000:5000
+        volumes:
+            - './visitors.txt:/app/visitors.txt'
