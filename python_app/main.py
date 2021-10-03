@@ -19,7 +19,7 @@ def index():
         Takes current time and displays it on the "/" page
     """
     time_now = datetime.datetime.now(tz=MSK_TZ)
-    with open("data/visitors.txt", "a") as f:
+    with open("visitors.txt", "a") as f:
         f.write(time_now.strftime('%X') + '\n')
     return f"<p> {time_now.strftime('%X')} </p>"
 
@@ -33,7 +33,7 @@ def health_check():
 @APP.route("/visitors")
 def visitors():
     resp = ''
-    with open("data/visitors.txt") as f:
+    with open("visitors.txt") as f:
         for line in f.readlines():
             resp += f"<p> {line} </p>"
     return resp
