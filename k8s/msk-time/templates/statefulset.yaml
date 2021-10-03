@@ -1,11 +1,13 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ include "msk-time.fullname" . }}
   labels:
     {{- include "msk-time.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
+  serviceName: {{ include "msk-time.fullname" . }}
+  podManagementPolicy: {{ .Values.statefulSet.podManagementPolicy }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
@@ -45,17 +47,19 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /healthcheck
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /healthcheck
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - name: configmap-volume
-              mountPath: /mnt
+              mountPath: {{ .Values.configPath }}
+            - name: visitors-volume
+              mountPath: {{ .Values.visitorsPath }}
       volumes:
         - name: configmap-volume
           configMap: 
@@ -72,3 +76,8 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+  volumeClaimTemplates:
+    - metadata:
+        name: visitors-volume
+      spec:
+        {{- toYaml .Values.statefulSet.volumeClaimTemplates.spec | nindent 8}}

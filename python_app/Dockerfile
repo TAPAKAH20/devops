@@ -11,6 +11,8 @@ RUN adduser -D user
 
 COPY main.py ./app/main.py
 
+RUN chmod 777 /app
+
 USER user
 
 WORKDIR /app/
