@@ -7,8 +7,8 @@ initialDelaySeconds: 3
 replicaCount: 2
 
 
-configPath: "/mnt/"
-visitorsPath: "/app/"
+configPath: "/mnt"
+visitorsPath: "/app/data"
 
 image:
   repository: r0ach20/devops
@@ -87,8 +87,10 @@ tolerations: []
 
 affinity: {}
 
+podManagementPolicy: "Parallel"
+
+
 statefulSet:
-  podManagementPolicy: "Parallel"
   volumeClaimTemplates:
     spec:
       accessModes: [ "ReadWriteOnce" ]
