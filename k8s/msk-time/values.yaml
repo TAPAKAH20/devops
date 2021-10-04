@@ -9,6 +9,7 @@ replicaCount: 2
 
 configPath: "/mnt"
 visitorsPath: "/app/data"
+downloadsPath: "/downloads"
 
 image:
   repository: r0ach20/devops

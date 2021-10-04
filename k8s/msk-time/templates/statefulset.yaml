@@ -60,10 +60,25 @@ spec:
               mountPath: {{ .Values.configPath }}
             - name: visitors-volume
               mountPath: {{ .Values.visitorsPath }}
+            - name: downloads
+              mountPath: {{ .Values.downloadsPath }}
+      initContainers:
+        - name: install
+          image: busybox
+          command:
+            - wget
+            - "-O"
+            - {{ .Values.downloadsPath }}/index.html
+            - http://info.cern.ch
+          volumeMounts:
+            - name: downloads
+              mountPath: {{ .Values.downloadsPath }}
       volumes:
         - name: configmap-volume
           configMap: 
             name: {{ include "msk-time.fullname" . }}-configmap
+        - name: downloads
+          emptyDir: {}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
